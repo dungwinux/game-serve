@@ -41,13 +41,13 @@ io.of("/game").on("connection", (socket) => {
     });
 });
 
-let listener;
-let reportFn = () => {
-    console.log(`Listening on localhost:${listener.address().port}`);
-};
-try {
-    listener = http.listen(PORT, reportFn);
-} catch (err) {
-    console.log(`Cannot host on ${PORT}. Using random port...`);
-    listener = http.listen(0, reportFn);
-}
+http.on("error", () => {
+    let listener = http.listen(0, () => {
+        console.log(`Cannot host on ${PORT}. Using random port...`);
+        console.log(`Listening on localhost:${listener.address().port}`);
+    });
+});
+
+http.listen(PORT, () => {
+    console.log(`Listening on localhost:${PORT}`);
+});
