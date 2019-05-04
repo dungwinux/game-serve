@@ -1,0 +1,26 @@
+{
+  "name": "game-serve",
+  "version": "0.0.1",
+  "description": "Boilerplate for game server, using express and socket.io",
+  "main": "bin/gameServe.js",
+  "scripts": {
+    "start": "node bin/gameServe.js"
+  },
+  "bin": {
+    "gameServe": "./bin/gameServe.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dungwinux/game-serve"
+  },
+  "author": "dungwinux",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dungwinux/game-serve/issues"
+  },
+  "homepage": "https://github.com/dungwinux/game-serve#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
+  }
+}
