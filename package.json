@@ -1,6 +1,6 @@
 {
   "name": "game-serve",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Boilerplate for game server, using express and socket.io",
   "main": "bin/gameServe.js",
   "scripts": {
