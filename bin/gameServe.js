@@ -9,7 +9,7 @@ console.log(`Hosting from ${process.cwd()}`);
 app.use(require("express").static(process.cwd()));
 
 var roomno = 0;
-let roomLimit = 2;
+const roomLimit = parseInt(process.env.ROOM_LIMIT) || 2;
 
 io.of("/game").on("connection", (socket) => {
     console.log(`${socket.client.id} connected`);
@@ -18,7 +18,7 @@ io.of("/game").on("connection", (socket) => {
 
     if (
         roomList["room" + roomno] &&
-        roomList["room" + roomno].length > roomLimit
+        roomList["room" + roomno].length >= roomLimit
     )
         roomno++;
 
