@@ -10,6 +10,6 @@ npm i -g game-serve
 
 1. Make sure your game is able to pair with your game (API coming soon)
 
-2. Start server (`.\gameServe`)
+2. Start server by executing `gameServe`
 
-3. Enjoy
+3. Enjoy 🎉
