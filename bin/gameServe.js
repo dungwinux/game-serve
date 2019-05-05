@@ -36,6 +36,7 @@ io.of("/game").on("connection", (socket) => {
     });
     socket.on("ready", (_) => {
         // TODO: Do something with msg
+        console.log(`${socket.client.id} is ready in ${myRoom}`);
         if (roomList[myRoom]) {
             let roomMember = Object.keys(roomList[myRoom].sockets);
             let roomState = {
