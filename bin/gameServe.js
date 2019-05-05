@@ -18,7 +18,7 @@ io.of("/game").on("connection", (socket) => {
 
     if (
         roomList["room" + roomno] &&
-        roomList["room" + roomno].length > roomLimit
+        roomList["room" + roomno].length >= roomLimit
     )
         roomno++;
 
