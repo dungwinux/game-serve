@@ -9,7 +9,7 @@ console.log(`Hosting from ${process.cwd()}`);
 app.use(require("express").static(process.cwd()));
 
 var roomno = 0;
-let roomLimit = process.env.ROOM_LIMIT || 2;
+let roomLimit = parseInt(process.env.ROOM_LIMIT) || 2;
 
 io.of("/game").on("connection", (socket) => {
     console.log(`${socket.client.id} connected`);
